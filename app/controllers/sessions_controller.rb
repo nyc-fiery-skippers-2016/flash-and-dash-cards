@@ -1,16 +1,16 @@
 get '/login' do
-  erb :'login'
+  erb :'sessions/login'
 end
 
 post '/login' do
-  @user = User.find_by(name: params[:user][:name])
+  @user = User.find_by(email: params[:email])
 
-  if @user && @user.authenticate(params[:user][:password])
+  if @user && @user.authenticate(params[:password])
     session[:user_id] = @user.id
-    redirect "/users/#{user.id}"
+    redirect "/users/#{@user.id}"
   else
     halt(403, "invalid username or password")
-    erb :'login'
+    erb :'sessions/login'
   end
 end
 
