@@ -1,1 +1,19 @@
 <h1 class='page-title'>Welcome <%= @user.name.capitalize %></h1>
+
+<table>
+  <tr>
+      <tr>
+        <td>Date</td>
+        <td>Cards in Deck</td>
+        <td>Correct on first guess</td>
+        <td>Percent correct overall</td>
+      </tr>
+      <tr>
+        <% @user.rounds.each do |round| %>
+          <td><%= round.created_at %><td>
+          <td><%= round.guesses.length %></td>
+          <% binding.pry %>
+          <td><%= round.last.first_card_guesses %></td>
+        <% end %>
+      </tr>
+</table>

@@ -14,6 +14,11 @@ end
 
 get '/users/:id' do
   @user = User.find_by(id: params[:id])
-
+  @round = @user.rounds.last
   erb :'users/show'
+end
+
+post '/users/:id' do
+
+  redirect "/users/#{user.id}"
 end

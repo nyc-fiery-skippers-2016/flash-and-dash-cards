@@ -5,7 +5,7 @@ class Card < ActiveRecord::Base
 
   def current_deck
   	self.deck_id
-  end 
+  end
 
   def move_to_next_card
   	if self.deck_id == self.current_deck
@@ -13,4 +13,7 @@ class Card < ActiveRecord::Base
   	end
   end
 
+
+
 end
+
