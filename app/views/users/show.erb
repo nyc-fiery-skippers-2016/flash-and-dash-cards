@@ -2,8 +2,6 @@
 
 <table>
   <tr>
-
-    <th><%= @user.rounds.decks.title %></th>
       <tr>
         <td>Date</td>
         <td>Cards in Deck</td>
@@ -11,8 +9,11 @@
         <td>Percent correct overall</td>
       </tr>
       <tr>
-        <% @round.each do |round| %>
-        <td><%= round.correct %></td>
+        <% @user.rounds.each do |round| %>
+          <td><%= round.created_at %><td>
+          <td><%= round.guesses.length %></td>
+          <% binding.pry %>
+          <td><%= round.last.first_card_guesses %></td>
         <% end %>
       </tr>
 </table>

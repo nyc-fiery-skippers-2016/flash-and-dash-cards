@@ -14,8 +14,7 @@ end
 
 get '/users/:id' do
   @user = User.find_by(id: params[:id])
-  @deck = Deck.find_by(deck_id: params[:deck_id])
-  binding.pry
+  @round = @user.rounds.last
   erb :'users/show'
 end
 
