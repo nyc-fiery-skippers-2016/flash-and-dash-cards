@@ -14,6 +14,10 @@ post '/rounds/:id/cards' do
 
 	# check_response = @round.guesses.first.response == @card.answer
 	if @card.deck_id == @next_card.deck_id
+		 
+			
+
+		
 	redirect "/rounds/#{@guess.round_id}/cards/#{@card.move_to_next_card}"
 	else
 		redirect "users/#{current_user.id}"
@@ -26,6 +30,3 @@ get '/rounds/:id/cards/:id' do
 
   erb :'cards/show'
 end
-
-
-
