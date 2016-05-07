@@ -1,4 +1,13 @@
-<h1 class="page-title"><%= @card.deck.title %></1>
+<h1 class="page-title"><%= @card.deck.title %></h1>
+
+
+
+<% if @round.guesses.length >= 1 && incorrect %>
+	<h4>the last answer was Incorrect</h4>
+<% end %>
+
+
+
 
 <h3 id="question"><%= @card.question %></h3>
 
