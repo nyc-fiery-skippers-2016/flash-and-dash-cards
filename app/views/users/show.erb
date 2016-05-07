@@ -1,1 +1,18 @@
 <h1 class='page-title'>Welcome <%= @user.name.capitalize %></h1>
+
+<table>
+  <tr>
+
+    <th><%= @user.rounds.decks.title %></th>
+      <tr>
+        <td>Date</td>
+        <td>Cards in Deck</td>
+        <td>Correct on first guess</td>
+        <td>Percent correct overall</td>
+      </tr>
+      <tr>
+        <% @round.each do |round| %>
+        <td><%= round.correct %></td>
+        <% end %>
+      </tr>
+</table>

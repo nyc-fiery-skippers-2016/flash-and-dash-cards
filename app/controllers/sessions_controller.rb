@@ -16,5 +16,5 @@ end
 
 get '/logout' do
   session.clear
-  redirect '/decks/show'
+  redirect '/'
 end
