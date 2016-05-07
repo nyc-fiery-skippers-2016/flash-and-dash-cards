@@ -18,13 +18,17 @@
   <title></title>
 </head>
 <body>
+<header id='site-name'>Flash N' Dash</header>
+<nav id='nav-bar'>
 <% if logged_in? %>
-  <a href="/users/<%= current_user.id %>"><%=current_user.name %></a>
-  <a href="/logout">Logout</a>
+  <a class='nav-items' id='test' href="/users/<%= current_user.id %>"><%=current_user.name.capitalize %></a>
+  <a class='nav-items' href="/logout">Logout</a>
 <% else %>
-  <a href="/login">Login</a>
+<a class='nav-items' href="/users/new">Register</a>
+  <a class='nav-items' href="/login">Login</a>
 <% end %>
-  <a href='/'>Home</a>
+  <a class='nav-items' href='/'>Home</a>
+</nav>
 
   <%= yield %>
 </body>
