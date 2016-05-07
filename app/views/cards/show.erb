@@ -1,12 +1,10 @@
-<h1 class="page-title"><%= @card.deck.title %></1>
+<h1>This is a flashcard</h1>
 
-<h3 id="question"><%= @card.question %></h3>
+<h2><%= @card.deck.title %></h2>
 
+<h3><%= @card.question %></h3>
 
-<form action='/rounds/<%= @round.id %>/cards' method='POST'>
-  <div class="form">
-  <input type="hidden" name="card_id" value="<%= @card.id %>">
-	<input type='text' name='response' placeholder='your answer'>
-	<input class="form-button" type='submit' value='submit your guess'>
-  </div>
+<form action='#' method='POST'>
+  <input type='text' name='guess[response]' placeholder='your answer'>
+  <input type='submit' value='submit your guess'>
 </form>

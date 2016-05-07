@@ -42,18 +42,13 @@ li > a {
 	border-top: 5px solid black;
 }
 
-#question {
-	text-align: center;
-	padding-top: 20px;
-}
-
 #start-round {
     background: none;
     border: 2px solid black;
     border-radius: 5px;
     display: inline;
     font: inherit;
-    margin: 5px;
+    margin: 5;
     margin-left: 5px;
     padding: 5px;
     outline: none;
